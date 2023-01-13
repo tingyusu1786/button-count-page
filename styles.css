@@ -1,0 +1,49 @@
+/* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
+
+:root {
+  --main-color: #afd275;
+  --dark-shadow: rgba(0, 0, 0, 0.1);
+  --light-shadow: rgba(255, 255, 255, 0.2);
+  --test: red;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px 50px;
+  background-color: var(--main-color);
+  padding: 0 50px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  box-shadow: 
+      -8px -8px 12px 0 var(--light-shadow),
+      3px 3px 8px 0 var(--light-shadow) inset,
+      8px 12px 12px 0 var(--dark-shadow),
+      -3px -3px 3px 0 var(--dark-shadow) inset;
+}
+
+.box-clicked {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  box-shadow: 
+    -8px -8px 12px 0 var(--dark-shadow),
+    12px 12px 16px 0 var(--dark-shadow) inset,
+    12px 12px 16px 0 var(--light-shadow),
+    -8px -8px 12px 0 var(--light-shadow) inset;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #fff9;
+}
